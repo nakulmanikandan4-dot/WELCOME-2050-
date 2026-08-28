@@ -1,26 +1,119 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Welcome to 2050</title>
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
-font-family:Arial,sans-serif;background:radial-gradient(circle at 50% 35%,#12345c,#020712 65%);color:white;overflow:hidden}
-.card{text-align:center;padding:28px 18px;max-width:700px;width:100%}
-h1{font-size:clamp(38px,10vw,82px);margin:0;text-shadow:0 0 22px #42d9ff}
-p{font-size:clamp(18px,4vw,30px);letter-spacing:4px;margin:12px 0 8px}
-.year{font-size:clamp(90px,25vw,190px);font-weight:900;color:#61e7ff;text-shadow:0 0 30px #00bfff}
-.icons{display:flex;justify-content:center;gap:28px;font-size:42px;margin-top:10px}
-.sub{font-size:16px;letter-spacing:2px;opacity:.8;margin-top:18px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURE WORLD 2050</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #03030d;
+      color: #00f3ff;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Futuristic Grid Animation */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background-image: 
+        linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      transform: perspective(500px) rotateX(60deg);
+      animation: gridMove 8s linear infinite;
+      z-index: 1;
+    }
+    @keyframes gridMove {
+      0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+      100% { transform: perspective(500px) rotateX(60deg) translateY(40px); }
+    }
+    .card {
+      position: relative;
+      z-index: 2;
+      border: 2px solid #00f3ff;
+      padding: 35px 25px;
+      border-radius: 20px;
+      background: rgba(10, 15, 30, 0.9);
+      box-shadow: 0 0 30px #00f3ff, inset 0 0 20px #00f3ff;
+      max-width: 85%;
+      backdrop-filter: blur(10px);
+      animation: float 4s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+    .emoji-top {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 0 0 10px #ff007f, 0 0 25px #ff007f;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      color: #00f3ff;
+      text-shadow: 0 0 12px #00f3ff;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #ffe600;
+      border-radius: 20px;
+      background: rgba(255, 230, 0, 0.1);
+      margin-bottom: 15px;
+    }
+    p.team {
+      font-size: 1.1rem;
+      color: #ffe600;
+      text-shadow: 0 0 8px #ffe600;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    p.school {
+      font-size: 0.95rem;
+      color: #ffffff;
+      text-shadow: 0 0 8px #00f3ff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-<div class="card">
-<h1>WELCOME</h1>
-<p>TO THE YEAR</p>
-<div class="year">2050</div>
-<div class="icons">🤖 🚀 🌐 ⚡ 🌱</div>
-<div class="sub">STEP INTO THE FUTURE</div>
-</div>
+  <div class="card">
+    <div class="emoji-top">🚀 🛸 🤖</div>
+    <h1>WELCOME TO 2050 🌐</h1>
+    <h2>FUTURE WORLD ⚡</h2>
+    <div class="badge">
+      <p class="team">💻 BY CS STUDENTS 👨‍💻</p>
+    </div>
+    <p class="school">🎓 VIDYASRI ENGLISH HIGHER SECONDARY SCHOOL 🏫</p>
+  </div>
 </body>
 </html>
